@@ -9,5 +9,6 @@
         {% endif %}
         <h2>{{ object.title }}</h2>
         <p>{{ object.text|linebreaksbr }}</p>
+        <h2><a href="{% url 'blog:post_list' %}" class="top-menu"><span class="glyphicon glyphicon-plus">Voltar</span></h2></a>
     </div>
 {% endblock %}
