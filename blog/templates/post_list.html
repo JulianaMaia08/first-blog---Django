@@ -2,12 +2,14 @@
 
 {% block content %}
     {% for post in object_list %}
-        <div class="post">
+<div class="container">
+        <div class="list-group">
             <div class="date">
                 {{ post.published_date }}
             </div>
-            <h2><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <h2><a href="{% url 'blog:post_detail' pk=post.pk %}" class="list-group-item list-group-item-action">{{ post.title }}</a></h2>
             <p>{{ post.text|linebreaksbr }}</p>
         </div>
+    </div>
     {% endfor %}
 {% endblock %}
